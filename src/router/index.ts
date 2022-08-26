@@ -4,17 +4,63 @@ import HomeView from "../views/HomeView.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
+    name: "homepage",
     component: HomeView,
   },
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    component: () => import("../views/AboutView.vue"),
+  },
+  {
+    path: "/demo",
+    name: "demo",
+    component: () => import("../views/DemoView.vue"),
+  },
+  {
+    path: "/redbook",
+    name: "redbook",
+    component: () => import("../views/RedBookView.vue"),
+  },
+  {
+    path: "/visual",
+    name: "visual",
+    component: () => import("../views/VisualView.vue"),
+  },
+  {
+    path: "/home",
+    name: "home",
+    component: () => import("../views/home/indexView.vue"),
+  },
+  {
+    path: "/way",
+    name: "way",
+    component: () => import("../views/way/indexView.vue"),
+  },
+  {
+    path: "/core",
+    name: "core",
+    component: () => import("../views/coreFoundation/indexView.vue"),
+  },
+  {
+    path: "/cross",
+    name: "cross",
+    component: () => import("../views/cross/indexView.vue"),
+  },
+  {
+    path: "/interview",
+    name: "interview",
+    component: () => import("../views/interview/indexView.vue"),
+  },
+  {
+    path: "/fullstack",
+    name: "fullstack",
+    component: () => import("../views/fullstack/indexView.vue"),
+  },
+  {
+    path: "/preview/:id",
+    name: "preview",
+    component: () => import("../views/home/previewView.vue"),
   },
 ];
 
